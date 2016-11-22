@@ -1,23 +1,20 @@
 package es.adrigala.test;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 public class Main {
 
     public static void main(String[] args) {
         try {
-            BufferedReader br = new BufferedReader(new FileReader(args[0] + ".txt"));
-            String linea;
-            while ((linea = br.readLine()) != null){
-                System.out.println(linea);
-                System.out.println("\n");
-
+            RandomAccessFile ra = new RandomAccessFile(new File("empleados.txt"), "rw");
+            ra.seek(-28 + (28 * Integer.parseInt(args[0])));
+            for (int i = 0; i < 3; i++) {
+               String test = ra.readLine();
+                System.out.println(test);
             }
+
         } catch (FileNotFoundException e) {
-            System.out.println("No se ha encontrado ese id de empleado");
+            System.out.println("No se ha encontrado el archivo de empleados");
         } catch (IOException e) {
             e.printStackTrace();
         }

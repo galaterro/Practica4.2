@@ -1,0 +1,27 @@
+empleado 1
+22
+prostituto
+empleado 2
+22
+prostituto
+empleado 3
+22
+prostituto
+empleado 4
+22
+prostituto
+empleado 5
+22
+prostituto
+empleado 6
+22
+prostituto
+empleado 7
+22
+prostituto
+empleado 8
+22
+prostituto
+empleado 9
+22
+prostituto
